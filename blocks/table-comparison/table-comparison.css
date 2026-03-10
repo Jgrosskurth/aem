@@ -1,0 +1,81 @@
+.table-comparison.block {
+  width: 100%;
+  overflow-x: auto;
+  margin: 24px 0;
+}
+
+.table-comparison.block table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-size: var(--body-font-size-xs);
+}
+
+@media (width >= 600px) {
+  .table-comparison.block table {
+    font-size: var(--body-font-size-s);
+  }
+}
+
+@media (width >= 900px) {
+  .table-comparison.block table {
+    font-size: var(--body-font-size-m);
+  }
+}
+
+.table-comparison.block table thead tr {
+  border-top: 2px solid var(--dark-color);
+  border-bottom: 2px solid var(--dark-color);
+  background-color: var(--gray-100);
+}
+
+.table-comparison.block table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table-comparison.block table tbody tr:nth-child(even) {
+  background-color: var(--gray-100);
+}
+
+.table-comparison.block table th {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: var(--body-font-size-xs);
+}
+
+.table-comparison.block table th,
+.table-comparison.block table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.table-comparison table th p,
+.table-comparison table td p {
+  margin: 0;
+}
+
+.table-comparison table td p + p {
+  margin-top: 0.25em;
+}
+
+/* First column (bat name) - bold */
+.table-comparison.block table td:first-child {
+  font-weight: 600;
+}
+
+/* no header variant */
+.table-comparison.block.no-header table tbody tr {
+  border-top: 1px solid;
+}
+
+/* striped variant */
+.table-comparison.block.striped tbody tr:nth-child(odd) {
+  background-color: var(--gray-100);
+}
+
+/* bordered variant */
+.table-comparison.block.bordered table th,
+.table-comparison.block.bordered table td {
+  border: 1px solid;
+}

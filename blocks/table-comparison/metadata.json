@@ -1,0 +1,41 @@
+{
+  "variantName": "table-comparison",
+  "baseBlock": "table",
+  "version": "1.0.0",
+  "created": "2026-03-10T18:37:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.dickssportinggoods.com/protips/sports-and-activities/baseball/best-bbcor-bats",
+    "originPage": "ProTips article - Best BBCOR Bats",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "stats-comparison",
+    "imagePattern": "noimg",
+    "structure": "header row + data rows with numeric stats"
+  },
+  "contentPattern": {
+    "structure": "4-column table: BAT name + EXIT VELOCITY + DISTANCE + HR LAUNCH ANGLE",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product spec comparison tables",
+      "sports statistics tables",
+      "equipment performance comparisons",
+      "data-driven buying guides"
+    ],
+    "notSuitableFor": [
+      "simple two-column key-value lists",
+      "pricing tables with CTAs",
+      "interactive data displays"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/protips/sports-and-activities/baseball/best-bbcor-bats"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-10T18:37:00.000Z"
+  }
+}

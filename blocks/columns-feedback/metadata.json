@@ -1,0 +1,41 @@
+{
+  "variantName": "columns-feedback",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-03-10T18:37:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.dickssportinggoods.com/protips/sports-and-activities/baseball/best-bbcor-bats",
+    "originPage": "ProTips article - Best BBCOR Bats",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "player-feedback",
+    "imagePattern": "icon",
+    "structure": "badge image + bullet list + ideal-for text + video link"
+  },
+  "contentPattern": {
+    "structure": "image column + text column with bullets and links",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product feedback panels",
+      "expert review sections",
+      "user testimonial panels with badges",
+      "rating summary panels"
+    ],
+    "notSuitableFor": [
+      "general side-by-side content",
+      "image galleries",
+      "text-heavy comparison sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/protips/sports-and-activities/baseball/best-bbcor-bats"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-10T18:37:00.000Z"
+  }
+}

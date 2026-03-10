@@ -1,0 +1,33 @@
+.columns-feedback > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-feedback img {
+  width: 100%;
+}
+
+.columns-feedback > div > div {
+  order: 1;
+}
+
+.columns-feedback > div > .columns-feedback-img-col {
+  order: 0;
+}
+
+.columns-feedback > div > .columns-feedback-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .columns-feedback > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .columns-feedback > div > div {
+    flex: 1;
+    order: unset;
+  }
+}

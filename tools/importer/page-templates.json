@@ -1,0 +1,75 @@
+{
+  "templates": [
+    {
+      "name": "protips-article",
+      "urls": [
+        "https://www.dickssportinggoods.com/protips/sports-and-activities/baseball/best-bbcor-bats"
+      ],
+      "description": "ProTips sports article page with product recommendations and expert advice",
+      "blocks": [
+        {
+          "name": "cards-product",
+          "instances": [
+            ".singleproduct"
+          ]
+        },
+        {
+          "name": "columns-feedback",
+          "instances": [
+            "main .aem-Grid > div:nth-child(3) .aem-Grid > .container.responsivegrid"
+          ]
+        },
+        {
+          "name": "table-comparison",
+          "instances": [
+            ".text.cmp-text_table-one"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "hero-intro",
+          "name": "Hero & Introduction",
+          "selector": "main .aem-Grid > div:nth-child(3) .aem-Grid",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".title--wrapper:first-child",
+            ".text.cmp-text_table-three",
+            ".datepicker",
+            ".image.pad-0",
+            ".aem-Grid > div:nth-child(9).text"
+          ]
+        },
+        {
+          "id": "product-reviews",
+          "name": "Product Reviews",
+          "selector": "main .aem-Grid > div:nth-child(3) .aem-Grid",
+          "style": null,
+          "blocks": [
+            "cards-product",
+            "columns-feedback"
+          ],
+          "defaultContent": [
+            ".title--wrapper:nth-child(11)",
+            ".aem-Grid > div:nth-child(12).text"
+          ]
+        },
+        {
+          "id": "comparison",
+          "name": "Side-by-Side Comparison",
+          "selector": "main .aem-Grid > div:nth-child(3) .aem-Grid",
+          "style": null,
+          "blocks": [
+            "table-comparison"
+          ],
+          "defaultContent": [
+            ".title--wrapper:nth-child(46)",
+            ".aem-Grid > div:nth-child(47).text",
+            ".aem-Grid > div:nth-child(51).text"
+          ]
+        }
+      ]
+    }
+  ]
+}
