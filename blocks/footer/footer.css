@@ -1,39 +1,10 @@
-footer {
-  background-color: var(--nav-bg-color);
-  color: var(--background-color);
-  font-size: var(--body-font-size-xs);
+/* footer - static DSG footer image */
+footer .footer {
+  width: 100%;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
-}
-
-footer .footer p {
-  margin: 0;
-}
-
-footer .footer a:any-link {
-  color: var(--background-color);
-  text-decoration: none;
-}
-
-footer .footer a:hover {
-  text-decoration: underline;
-}
-
-footer .footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 16px 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 24px;
-}
-
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
+footer .footer img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
