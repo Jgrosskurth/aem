@@ -8,4 +8,5 @@ header .nav-wrapper img {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 64 / 13;
 }

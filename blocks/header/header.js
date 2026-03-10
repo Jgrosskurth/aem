@@ -10,7 +10,10 @@ export default async function decorate(block) {
   const img = document.createElement('img');
   img.src = '/content/dsg-header.png';
   img.alt = "DICK'S Sporting Goods";
+  img.width = 1280;
+  img.height = 260;
   img.loading = 'eager';
+  img.fetchPriority = 'high';
   wrapper.append(img);
 
   block.append(wrapper);
