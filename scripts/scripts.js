@@ -182,6 +182,45 @@ function buildSocialShare(main) {
 }
 
 /**
+ * Adds featured product recommendations to the sidebar section.
+ * @param {Element} main The main element
+ */
+function buildFeaturedProducts(main) {
+  const sidebar = main.querySelector('.section.sidebar');
+  if (!sidebar) return;
+  const products = [
+    {
+      name: "Nike Kids' Hyperdiamond 4 Keystone Softball Cleats",
+      price: '$29.99',
+      href: 'https://www.dickssportinggoods.com/p/nike-kids-hyperdiamond-4-keystone-softball-cleats-21nikywhyprdmnd4krbb/21nikywhyprdmnd4krbb',
+      img: 'https://dks.scene7.com/is/image/dkscdn/21NIKYWHYPRDMND4KRBB_Pure_Platinum_Grey_White_is',
+    },
+    {
+      name: "New Balance Men's Fresh Foam X 3000 V7 Molded Baseball Cleats",
+      price: '$94.99 - $104.99',
+      href: 'https://www.dickssportinggoods.com/p/new-balance-mens-fresh-foam-x-3000-v7-molded-baseball-cleats-24nwbmfrshfm3000vclta/24nwbmfrshfm3000vclta',
+      img: 'https://dks.scene7.com/is/image/dkscdn/24NWBMFRSHFM3000VCLTA_Red_White_is',
+    },
+    {
+      name: "Nike Kids' Dri-FIT Multi Woven Shorts",
+      price: '$12.97 - $25.00',
+      href: 'https://www.dickssportinggoods.com/p/nike-kids-dri-fit-multi-woven-shorts-22nikbbnkdfmltshraot/22nikbbnkdfmltshraot',
+      img: 'https://dks.scene7.com/is/image/dkscdn/22NIKBBNKDFMLTSHRAOT_Cannon_White_is',
+    },
+  ];
+  const section = document.createElement('div');
+  section.className = 'featured-products';
+  section.innerHTML = `<h3>Featured Products</h3><ul>${products.map((p) => `<li><a href="${p.href}" target="_blank" rel="noopener noreferrer"><img src="${p.img}" alt="${p.name}" loading="lazy" width="90" height="90"><div><span class="fp-name">${p.name}</span><span class="fp-price">${p.price}</span></div></a></li>`).join('')}</ul>`;
+  // Insert after social share, before Related Products
+  const socialShare = sidebar.querySelector('.social-share');
+  if (socialShare && socialShare.nextSibling) {
+    sidebar.insertBefore(section, socialShare.nextSibling);
+  } else {
+    sidebar.prepend(section);
+  }
+}
+
+/**
  * Loads everything that doesn't need to be delayed.
  * @param {Element} doc The container element
  */
@@ -192,6 +231,7 @@ async function loadLazy(doc) {
   await loadSections(main);
 
   buildSocialShare(main);
+  buildFeaturedProducts(main);
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
