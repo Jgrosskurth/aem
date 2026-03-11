@@ -7,27 +7,7 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   footer.className = 'footer-content';
 
-  // Social icons row
-  const socialRow = document.createElement('div');
-  socialRow.className = 'footer-social';
-  const socials = [
-    { name: 'YouTube', icon: 'youtube', url: 'https://www.youtube.com/user/dickssportinggoods' },
-    { name: 'X', icon: 'x', url: 'https://x.com/DLOSSTOREDIGITAL' },
-    { name: 'Facebook', icon: 'facebook', url: 'https://www.facebook.com/dickssportinggoods' },
-    { name: 'Instagram', icon: 'instagram', url: 'https://www.instagram.com/dickssportinggoods/' },
-  ];
-  socials.forEach(({ name, icon, url }) => {
-    const a = document.createElement('a');
-    a.href = url;
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    a.setAttribute('aria-label', name);
-    a.innerHTML = `<span class="icon icon-${icon}"><img data-icon-name="${icon}" src="/icons/${icon}.svg" alt="${name}" loading="lazy"></span>`;
-    socialRow.append(a);
-  });
-  footer.append(socialRow);
-
-  // Logo + copyright
+  // Copyright + legal links
   const bottomBar = document.createElement('div');
   bottomBar.className = 'footer-bottom';
   bottomBar.innerHTML = `

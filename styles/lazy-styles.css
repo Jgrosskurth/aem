@@ -1,1 +1,29 @@
 /* add global styles that can be loaded post LCP here */
+
+/* Social share icons in sidebar */
+.social-share {
+  display: flex;
+  gap: 12px;
+  padding: 0 0 24px;
+}
+
+.social-share a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-share a:hover {
+  color: var(--accent-color);
+}
+
+.social-share .icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.social-share .icon img {
+  width: 100%;
+  height: 100%;
+}

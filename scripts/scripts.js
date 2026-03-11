@@ -151,6 +151,37 @@ async function loadEager(doc) {
 }
 
 /**
+ * Adds social sharing icons to the sidebar section.
+ * @param {Element} main The main element
+ */
+function buildSocialShare(main) {
+  const sidebar = main.querySelector('.section.sidebar');
+  if (!sidebar) return;
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent(document.title);
+  const shares = [
+    { name: 'Facebook', icon: 'facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${url}` },
+    { name: 'X', icon: 'x', href: `https://x.com/intent/tweet?url=${url}&text=${title}` },
+    { name: 'Email', icon: 'email', href: `mailto:?subject=${title}&body=${url}` },
+    { name: 'Pinterest', icon: 'pinterest', href: `https://pinterest.com/pin/create/button/?url=${url}&description=${title}` },
+    { name: 'LinkedIn', icon: 'linkedin', href: `https://www.linkedin.com/sharing/share-offsite/?url=${url}` },
+  ];
+  const nav = document.createElement('nav');
+  nav.className = 'social-share';
+  nav.setAttribute('aria-label', 'Share this article');
+  shares.forEach(({ name, icon, href }) => {
+    const a = document.createElement('a');
+    a.href = href;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.setAttribute('aria-label', `Share on ${name}`);
+    a.innerHTML = `<span class="icon icon-${icon}"><img data-icon-name="${icon}" src="/icons/${icon}.svg" alt="${name}" loading="lazy"></span>`;
+    nav.append(a);
+  });
+  sidebar.prepend(nav);
+}
+
+/**
  * Loads everything that doesn't need to be delayed.
  * @param {Element} doc The container element
  */
@@ -159,6 +190,8 @@ async function loadLazy(doc) {
 
   const main = doc.querySelector('main');
   await loadSections(main);
+
+  buildSocialShare(main);
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;

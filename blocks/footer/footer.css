@@ -3,26 +3,6 @@ footer .footer-content {
   width: 100%;
 }
 
-/* social icons row */
-footer .footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 24px 0;
-  border-top: 1px solid var(--gray-200);
-}
-
-footer .footer-social a {
-  color: var(--text-color);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-footer .footer-social .icon {
-  width: 28px;
-  height: 28px;
-}
-
 /* bottom bar */
 footer .footer-bottom {
   background-color: #f6f5f3;
@@ -46,11 +26,6 @@ footer .footer-legal {
 footer .footer-legal a {
   color: var(--gray-500);
   text-decoration: none;
-}
-
-/* hover states */
-footer .footer-social a:hover {
-  color: var(--accent-color);
 }
 
 footer .footer-legal a:hover {
