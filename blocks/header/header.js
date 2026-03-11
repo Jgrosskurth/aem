@@ -141,12 +141,14 @@ export default async function decorate(block) {
   const wrapper = document.createElement('div');
   wrapper.className = 'nav-wrapper';
 
-  wrapper.append(buildPromoBanner());
-  wrapper.append(buildUtilityNav());
-  wrapper.append(buildMainHeader());
-  wrapper.append(buildCategoryNav());
-  wrapper.append(buildProTipsBar());
-  wrapper.append(buildBreadcrumb());
+  const frag = document.createDocumentFragment();
+  frag.append(buildPromoBanner());
+  frag.append(buildUtilityNav());
+  frag.append(buildMainHeader());
+  frag.append(buildCategoryNav());
+  frag.append(buildProTipsBar());
+  frag.append(buildBreadcrumb());
+  wrapper.append(frag);
 
   block.append(wrapper);
 }

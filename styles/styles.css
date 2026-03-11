@@ -114,7 +114,17 @@ body.appear {
 }
 
 header {
-  height: auto;
+  height: 310px;
+}
+
+footer {
+  min-height: 96px;
+}
+
+@media (width >= 900px) {
+  header {
+    height: 318px;
+  }
 }
 
 header .header,
